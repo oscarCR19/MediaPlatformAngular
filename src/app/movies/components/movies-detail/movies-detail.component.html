@@ -19,7 +19,10 @@
                 <li class="list-group-item"><strong>Rating:</strong> {{ movieDetails.vote_average }}</li>
             </ul>
             <h5 class="mb-3">Related videos</h5>
+            
+            
             <div class="list-group">
+                
                 <a *ngFor="let video of movieVideos" href="https://www.youtube.com/watch?v={{ video.key }}"
                     target="_blank" class="list-group-item list-group-item-action">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
@@ -32,3 +35,6 @@
         </div>
     </div>
 </div>
+<label>Este es el video de prueba</label>
+<iframe width="560" height="315" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+<label>{{ movieVideos[0].key}}</label>

@@ -6,10 +6,12 @@ import { MoviesPageComponent } from './components/movies-page/movies-page.compon
 import { MoviesDetailComponent } from './components/movies-detail/movies-detail.component';
 
 
+
 @NgModule({
   declarations: [
     MoviesPageComponent,
-    MoviesDetailComponent
+    MoviesDetailComponent,
+   
   ],
   imports: [
     CommonModule,

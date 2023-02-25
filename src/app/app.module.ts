@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MoviesModule } from './movies/movies.module';
 import { SeriesModule } from './series/series.module';
 import { SharedModule } from './shared/shared.module';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     SharedModule,
     MoviesModule,
-    SeriesModule
+    SeriesModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

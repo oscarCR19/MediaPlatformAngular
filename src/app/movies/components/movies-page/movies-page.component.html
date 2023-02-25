@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div>
+        <h3>{{moviesCategory}}</h3>
+    </div>
+    <div class="btn-group me-2" role="group" aria-label="First group">
+        <button (click)="loadMoviePage(1)" type="button" class="btn btn-primary">1</button>
+        <button (click)="loadMoviePage(2)" type="button" class="btn btn-primary">2</button>
+        <button (click)="loadMoviePage(3)" type="button" class="btn btn-primary">3</button>
+    </div>
+    <div class="row">
+        <div id="cardMovies" class="card" *ngFor="let movie of movies">
+            <img src='https://image.tmdb.org/t/p/original{{ movie.poster_path }}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <div class="row">
+                    <div class="col-5">
+                        Votes:
+                    </div>
+                    <div class="col-7">
+                        {{ movie.vote_average }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Released:
+                    </div>
+                    <div class="col-7">
+                        {{ movie.release_date }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Popularity:
+                    </div>
+                    <div class="col-7">
+                        {{ movie.popularity }}
+                    </div>
+                </div>
+                <hr>
+                <a [routerLink]="['/movies/', movie.id]" class="btn btn-primary">View movie</a>
+            </div>
+        </div>
+    </div>
+</div>
